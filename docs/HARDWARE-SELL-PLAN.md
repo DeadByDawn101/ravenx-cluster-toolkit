@@ -1,134 +1,146 @@
 # Hardware Sell Plan — August 2026
-## M3 Ultra Studio + M4 Pro Mini → Reinvest into Linux Rig
+## M3 Ultra Studio + M4 Pro Mini → $14,000 → Fund Everything
 
 ---
 
 ## Machines to Sell
 
 ### 1. Mac Studio M3 Ultra 96GB / 1TB
-**Retail (new):** $5,999
-**Current resale (eBay, Aug 2026):**
-- Sealed/refurbished: $2,225-2,500 (bidding)
-- Open box/mint: $2,500-3,200 (Buy It Now)
-- Used good condition: $2,000-2,800
-
-**Your estimated sale price:** $2,500-3,000 (used, good condition, with box)
-
+**Current market price:** ~$8,000
 **Why sell NOW:**
-- M5 Ultra announcement expected macOS 27 (autumn 2026)
-- Resale drops $800-1,200 on announcement day
+- M5 Ultra announcement expected autumn 2026
+- Post-announcement price: ~$5,000-6,000 (LOSE $2,000-3,000)
 - 96GB limits shard size — can't hold half of 100B+ models
 - Not M4 architecture — no TB5 Bandwidth Boost
-- No longer part of active cluster (2× M4 Max is the config)
+- No longer part of active cluster
 
-### 2. Mac Mini M4 Pro 64GB / 1TB (4TB? — confirm your config)
-**Retail (new, 14C/20C, 64GB, 1TB):** $1,799
-**Current resale (eBay, Aug 2026):**
-- Sealed/refurbished: $1,500-1,900
-- Open box: $1,400-1,700
-- Used good: $1,200-1,500
-
-**Your estimated sale price:** $1,300-1,600 (used, good condition)
-
+### 2. Mac Mini M4 Pro 64GB / 4TB
+**Current market price:** ~$6,000
 **Why sell NOW:**
-- M5 Mini likely early 2027 — depreciation accelerates
-- 64GB = half the memory of your M4 Max nodes
+- M5 Mini likely early 2027
+- Post-announcement price: ~$3,000-4,000 (LOSE $2,000-3,000)
+- 64GB = half the memory of M4 Max nodes
 - Not part of active JACCL cluster
-- Strong demand right now for M4 Pro Minis
+- 4TB SSD config commands premium NOW
 
 ---
 
 ## Financial Summary
 
 ```
-SELL:
-  M3 Ultra 96GB Studio:    $2,500 - $3,000
-  M4 Pro 64GB Mini:        $1,300 - $1,600
-  ──────────────────────────────────────
-  TOTAL INCOMING:           $3,800 - $4,600
+INCOMING:
+  M3 Ultra 96GB Studio:              $8,000
+  M4 Pro 64GB/4TB Mini:              $6,000
+  ────────────────────────────────────────
+  TOTAL:                              $14,000
 
-REINVEST:
-  Linux Rig (Threadripper + 256GB DDR5):  ~$1,500
-  RTX 3090 × 2 (already owned?):          $0 (if owned)
-  RTX 5080 (already owned?):              $0 (if owned)
-  ──────────────────────────────────────
-  TOTAL OUTGOING:           $0 - $1,500
+OUTGOING:
+  Patent filings (both, micro):      $760
+  Patent attorney:                   $3,000 - $5,000
+  Linux rig (Threadripper build):    $1,500
+  EIN + Mercury bank:                $0
+  ────────────────────────────────────────
+  TOTAL:                             $5,260 - $7,260
 
-NET CASH TO LLC:            $2,300 - $4,600
+NET CASH TO LLC:                     $6,740 - $8,740
 
-  + Patent filing:          -$760 (both patents, micro entity)
-  + Attorney:               -$3,000 - $5,000
-
-  NET AFTER PATENTS:        -$2,460 to +$1,600
+DEPRECIATION COST OF WAITING:
+  M3 Ultra: $2,000-3,000 drop at M5 announcement
+  M4 Pro Mini: $2,000-3,000 drop at M5 announcement
+  ────────────────────────────────────────
+  TOTAL RISK OF DELAY:               $4,000 - $6,000
 ```
 
-**The hardware sale FUNDS the patent filings.**
+**$14K funds: patents ($760), attorney ($3-5K), Linux rig ($1.5K), and leaves $6-8K LLC operating capital.**
 
 ---
 
-## What You Keep
+## What You Keep (Active Fleet)
 
-| Machine | Memory | Role | Status |
-|---------|--------|------|--------|
-| M4 Max 128GB MacBook Pro | 128GB | JACCL Node 0 | ✅ Active |
-| M4 Max 128GB MacBook Pro | 128GB | JACCL Node 1 | ✅ Active |
-| M1 Pro 64GB MacBook Pro | 64GB | Agents (Raven, Hermes, trading) | ✅ Active |
-| M3 24GB MacBook | 24GB | Conductor (Parsec, SSH) | ✅ Active |
-| M2 Air 16GB | 16GB | Remote (Parsec, SSH) | ✅ Active |
-| Linux Rig | 256GB + 72GB VRAM | CUDA training (pending assembly) | 🔜 Building |
-| iPhone 17 Pro Max | — | Remote to Claude | ✅ Active |
+| Machine | Memory | Role | Value |
+|---------|--------|------|-------|
+| M4 Max 128GB MacBook Pro | 128GB | JACCL Node 0 (primary) | KEEP |
+| M4 Max 128GB MacBook Pro | 128GB | JACCL Node 1 (secondary) | KEEP |
+| M1 Pro 64GB MacBook Pro | 64GB | Agents: Raven, Hermes, trading | KEEP |
+| M3 24GB MacBook | 24GB | Conductor: Parsec, SSH, Termius | KEEP |
+| M2 Air 16GB | 16GB | Mobile remote: Parsec, SSH | KEEP |
+| Linux Rig (pending) | 256GB + 72GB VRAM | CUDA training beast | BUILDING |
+| iPhone 17 Pro Max | — | Claude remote | KEEP |
 
-**Total active cluster memory:** 256GB (JACCL) + 64GB (agents) + 24GB (conductor) = 344GB
-**With Linux rig:** 344GB + 256GB system + 72GB VRAM = 672GB total
-
----
+**Active compute after sells:**
+- JACCL cluster: 256GB (2× M4 Max over TB5)
+- Agent fleet: 104GB (M1 Pro + M3 + M2 Air)
+- Linux rig: 256GB system + 72GB VRAM
+- **Total: 688GB sovereign compute**
 
 ## What You Sell
 
-| Machine | Why Sell | When | Target Price |
-|---------|---------|------|-------------|
-| M3 Ultra 96GB Studio | 96GB limits, not M4, M5 incoming | THIS WEEK | $2,500-3,000 |
-| M4 Pro 64GB Mini | 64GB limits, not in cluster | THIS WEEK | $1,300-1,600 |
+| Machine | Why | When | Price |
+|---------|-----|------|-------|
+| M3 Ultra 96GB Studio | 96GB limits, M5 incoming, not in cluster | THIS WEEKEND | $8,000 |
+| M4 Pro 64GB/4TB Mini | 64GB limits, not in cluster, 4TB premium | THIS WEEKEND | $6,000 |
 
 ---
 
-## Selling Tips
+## How $14K Funds RavenX AI Labs
 
-1. **List on eBay + Swappa simultaneously** — more eyes = faster sale
-2. **Include original box + cables** — adds $100-200 to price
-3. **Factory reset first** — Settings → Erase All Content and Settings
-4. **Take clear photos** — all sides, ports, screen (if applicable)
-5. **Title format:** "Apple Mac Studio M3 Ultra 96GB 1TB SSD 28-Core — Mint Condition"
-6. **Set Buy It Now + Best Offer** — attracts both buyer types
-7. **Ship USPS Priority or FedEx** — eBay gives seller protection
-8. **List on Friday or Saturday** — highest traffic days
+```
+IMMEDIATE (August):
+  ├── List both machines:           +$14,000
+  ├── Patent filings (both):        -$760
+  └── Attorney retainer:            -$3,000
+                                    ────────
+                                    $10,240 remaining
+
+SEPTEMBER:
+  ├── Attorney balance:             -$2,000
+  ├── Linux rig assembly:           -$1,500
+  └── EIN + Mercury setup:          $0
+                                    ────────
+                                    $6,740 remaining
+
+OCTOBER-DECEMBER:
+  ├── LLC operating capital
+  ├── HuggingFace Pro ($9/mo)
+  ├── Domain renewals
+  ├── Conference/networking
+  └── Emergency fund
+                                    ────────
+                                    ~$5,000 runway into 2027
+```
+
+**The hardware sale alone funds the entire LLC through patent grants (April-May 2027).**
 
 ---
 
 ## Timeline
 
 ```
-Week of Aug 10:
+Saturday Aug 8-9:
   → Factory reset both machines
-  → Take photos, list on eBay + Swappa
-  → Set competitive Buy It Now prices
+  → Photos, list on eBay + Swappa + FB Marketplace
+
+Week of Aug 10:
+  → Accept offers, ship
 
 Week of Aug 17:
-  → Accept best offers / finalize sales
-  → Ship immediately
-
-Week of Aug 24:
-  → Cash in LLC account
-  → Assemble Linux rig
-  → File patents ($760)
+  → Cash in hand
+  → Attorney call, file patents
 
 September 4:
-  → Both patents filed (non-provisional)
+  → Both non-provisionals filed
   → Linux rig operational
-  → JACCL cluster + CUDA = full sovereign AI lab
+  → Full sovereign AI lab: 688GB, zero cloud dependency
+
+April-May 2027:
+  → Both patents GRANTED
+  → Portfolio value: $70M-$160M+
+  → Funded entirely by selling two machines
 ```
 
-*"Walls break. Math doesn't." — but depreciation is also math.*
-*Sell now. File patents. Ship models.*
+---
+
+*$14,000 in idle hardware → patents + attorney + Linux rig + 6 months runway.*
+*Depreciation is also math. Sell now.*
 
 — RavenX AI Labs LLC, August 2026
