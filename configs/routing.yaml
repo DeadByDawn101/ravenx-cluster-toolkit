@@ -1,1 +1,48 @@
-# Device routing config
+# RavenX Cluster Routing — Star Platinum v3
+# Updated August 8, 2026
+
+cluster:
+  name: "Star Platinum v3"
+  version: 3
+
+nodes:
+  - name: "ravenx-m4max-0"
+    host: "ravenx@localhost"
+    ip: "10.0.0.1"
+    type: metal
+    memory_gb: 128
+    chip: "M4 Max"
+    role: primary
+    status: active
+
+  - name: "gabe-m4max-1"
+    host: "gabegarcia@10.0.0.2"
+    ip: "10.0.0.2"
+    type: metal
+    memory_gb: 128
+    chip: "M4 Max"
+    role: secondary
+    status: active
+
+  # SOLD — M3 Ultra 96GB Studio
+  # Resale value ~$5,500-6,500 (Aug 2026)
+  # 96GB limits shard size, not M4, no TB5 Boost
+  # Capital reinvested into Linux rig
+
+  - name: "linux-rtx-rig"
+    host: "ravenx@linux-rig"
+    ip: "192.168.1.XXX"
+    type: cuda
+    memory_gb: 72  # 2x 3090 (48GB) + 5080 (24GB)
+    gpus: ["RTX 3090", "RTX 3090", "RTX 5080"]
+    role: compute
+    status: pending_assembly
+
+interconnect:
+  mac_to_mac: "thunderbolt5"  # 80 Gbps RDMA
+  mac_to_linux: "ethernet"     # 10 Gbps (RoCE planned)
+
+backends:
+  mac_nodes: "ring"   # Current: ring TCP. Target: jaccl RDMA
+  linux_nodes: "nccl"  # NVIDIA NCCL for multi-GPU
+  cross_arch: "ring"   # MLX ring for Mac ↔ Linux
