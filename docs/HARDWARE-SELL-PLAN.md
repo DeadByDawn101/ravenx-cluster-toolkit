@@ -144,3 +144,22 @@ April-May 2027:
 *Depreciation is also math. Sell now.*
 
 — RavenX AI Labs LLC, August 2026
+
+---
+
+## Linux Rig — Parts Already Owned
+
+| Part | Status | Value |
+|------|--------|-------|
+| 2× RTX 3090 (48GB VRAM) | ✅ OWNED | $360 (@ $180 ea) |
+| RTX 5080 (24GB VRAM) | ✅ OWNED | $180 |
+| 256GB DDR5 RAM | ✅ OWNED | $2,600 |
+| 4TB NVMe SSD | ✅ OWNED | $1,000 |
+| **Subtotal owned** | | **$4,140** |
+| Threadripper CPU | ❌ NEED | ~$500-800 |
+| TRX50 Motherboard | ❌ NEED | ~$400-600 |
+| PSU (1200W+) | ❌ NEED | ~$200-300 |
+| Case | ❌ NEED | ~$100-200 |
+| **Subtotal needed** | | **~$1,200-1,900** |
+
+**The rig is 70% built. $1,500 finishes it.**
